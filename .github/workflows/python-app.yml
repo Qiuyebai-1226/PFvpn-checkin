@@ -6,6 +6,8 @@ name: Python application
 on:
     push:
       branches: [ "main" ]
+    watch:
+    types: [ started ]
 #   pull_request:
 #     branches: [ "main" ]
     schedule:
@@ -34,7 +36,7 @@ jobs:
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - name: checkin
       run: |
-        python checkin.py
+        python checkin_action.py
       env:
         USER: ${{ secrets.USERS  }}
         PASSWORD: ${{ secrets.PASSWORD  }}
