@@ -28,8 +28,10 @@ linux无图形界面需要将第七行代码`headless=False`改为`headless=True
 
 - nonebot使用
 
-  将**checkin.py**文件放在bot根目录，nonebot_plugin_PFvpn_checkin文件夹放置在src/plugins文件夹中，按注释修改**__init__.py**文件即可
+  将**checkin.py**文件放在bot根目录，nonebot_plugin_PFvpn_checkin文件夹放置在src/plugins文件夹中，按注释修改**init.py**文件即可
 
   脚本会定时执行，也可手动进行签到，签到完成后会将页面截图发送给设定的QQ
 
   ![截图](截图.png)
+
+![网页截图](网页截图.png)
