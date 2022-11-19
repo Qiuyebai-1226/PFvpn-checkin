@@ -7,8 +7,9 @@ def run(playwright: Playwright) -> None:
     browser = playwright.chromium.launch(headless=False)
     
 
-    context = browser.new_context()
+    context = browser.new_context(viewport={"width":1300,"height":1440})
     page = context.new_page()
+   
     page.goto("https://purefast.net/user")
     time.sleep(6)
     page.goto("https://purefast.net/auth/login")
@@ -28,7 +29,8 @@ def run(playwright: Playwright) -> None:
     time.sleep(2)
     page.get_by_role("button", name="已读").click()
     time.sleep(2)
-    element_handle = page.query_selector("//section[@class='main-content']")
+    
+    element_handle = page.query_selector("//section[@class='section']")
     element_handle.screenshot(path='result.png')
     page.close()
     time.sleep(5)
