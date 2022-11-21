@@ -28,7 +28,10 @@ linux无图形界面需要将第七行代码`headless=False`改为`headless=True
 
   直接使用checkin.py文件即可，自行设置定时任务
 
-  github action 不会用 摆烂了 欢迎pr
+
+- GitHub action使用（未充分测试，且无结果反馈）
+
+  在`secrets`中添加`USERS`和`PWDS`两个变量，不同账号使用`;`隔开，自行修改定时运行时间。
 
 - nonebot使用
 
