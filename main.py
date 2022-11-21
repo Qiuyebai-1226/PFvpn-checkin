@@ -23,9 +23,7 @@ async def run(usr,pwd):
         # await asyncio.sleep(2)
         # element_handle = await page.query_selector("//section[@class='section']")
         # await element_handle.screenshot(path='result'+usr[0:3]+'.png')
-        element_handle = await page.text_content("//li[@class='breadcrumb-item active']")
         
-        requests.get(url='http://43.138.74.178:2017/send_private_msg?user_id=978996836&message='+element_handle)
         await page.close()
         await context.close()
         await browser.close()
