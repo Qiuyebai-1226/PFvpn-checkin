@@ -1,5 +1,6 @@
-from playwright.async_api import async_playwright
 import asyncio
+from playwright.async_api import async_playwright
+
 
 async def run(usr,pwd):
     async with async_playwright() as playwright:
@@ -7,9 +8,7 @@ async def run(usr,pwd):
         context = await browser.new_context(viewport={"width":1300,"height":1440})
         page = await context.new_page()
         await page.goto("https://purefast.net/auth/login")
-        #此处填入账号
         await page.get_by_label("邮箱无需验证码").fill(usr)
-        #此处填入密码
         await page.get_by_label("密码").fill(pwd)
         await page.get_by_role("button", name="登录").click()
         await page.wait_for_url("https://purefast.net/user")
