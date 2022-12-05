@@ -29,7 +29,7 @@ linux无图形界面需要将第七行代码`headless=False`改为`headless=True
   直接使用checkin.py文件即可，自行设置定时任务
 
 
-- GitHub action使用
+- GitHub action使用  
   fork本项目，在`secrets`中添加`USERS`和`PWDS`两个变量，不同账号使用`;`隔开，自行修改定时运行时间。
   未充分测试，且结果无反馈，请自行测试。
 
