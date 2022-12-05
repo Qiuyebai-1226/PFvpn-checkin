@@ -4,8 +4,9 @@
 name: Python application
 
 on:
-  schedule:
-    - cron: '00 17 * * *'
+  #定时任务
+  #schedule:
+  #  - cron: '00 17 * * *'
   workflow_dispatch: null
 
 jobs:
@@ -31,4 +32,4 @@ jobs:
           USERS: ${{ secrets.USERS }}
           PWDS: ${{ secrets.PWDS }}
 
-      run: python  Checkin.py
+      run: python  checkin_action.py
